@@ -13,7 +13,6 @@ Let's look at this regex `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
@@ -64,8 +63,6 @@ The character class is defined here as needing to match lowercase letters, [a-z]
 The role of character classes is to make distinctions between various types of characters, such as separating letters from digits.
 `\d` will match any digit [0-9]. `a-z` will match any lowercase letter, `\.` will match a dot, and `-` will match a hyphen.
 This segment of the regex looks for a sequence that can contain digits, lowercase letters, periods (dots), or hyphens. This is searching the domain name portion of the URL.
-
-### The OR Operator
 
 ### Flags
 
