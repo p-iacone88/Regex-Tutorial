@@ -29,7 +29,19 @@ To start, this regular expression uses the `^` anchor to denote the start of the
 
 ### Quantifiers
 
+```javascript
+([\/\w \.-]*)*
+```
+
+Quantifiers are the symbols to define the number of occurrences of the preceding character or group. The `*` quantifier is used to signify zero or more, so the proceeding element is allowed to not be present at all, or it can appear as many times as used in what is being tested.
+
 ### Grouping Constructs
+
+```javascript
+(https?:\/\/)?
+```
+
+The use of parentheses for grouping constructs in regex enables the accurate application of quantifiers to specific regex elements. In this example, the parentheses are used to group the protocol section, as shown in the JavaScript code snippet.
 
 ### Bracket Expressions
 
