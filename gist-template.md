@@ -37,6 +37,8 @@ To start, this regular expression uses the `^` anchor to denote the start of the
 
 Quantifiers are the symbols to define the number of occurrences of the preceding character or group. The `*` quantifier is used to signify zero or more, so the proceeding element is allowed to not be present at all, or it can appear as many times as used in what is being tested.
 
+In this case, forward slashes`/`, word characters `\w`, spaces, dots `.`, and hyphens `-` can be used. The `* ` means that the URL path can occur many times or not at all due to the variety of URL structures.
+
 ### Grouping Constructs
 
 ```javascript
@@ -44,6 +46,12 @@ Quantifiers are the symbols to define the number of occurrences of the preceding
 ```
 
 The use of parentheses for grouping constructs in regex enables the accurate application of quantifiers to specific regex elements. In this example, the parentheses are used to group the protocol section, as shown in the JavaScript code snippet.
+
+Inside of the group, `https?` represents the protocol section. `s?` means that the 's' is optional so that either secure (https) or non-secure (http) protocols can be accepted.
+
+The `:\/\/` incorporates escape characters to make sure the regex separates the protocol from the rest of the URL.
+
+The last `?` signifies the protocol section is optional, so that a URL without a specified protocol can be accepted.
 
 ### Bracket Expressions
 
