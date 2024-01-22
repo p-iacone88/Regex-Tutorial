@@ -25,6 +25,10 @@ Let's look at this regex `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.
 /^
 ```
 
+```javascript
+/$
+```
+
 To start, this regular expression uses the `^` anchor to denote the start of the string, while the `$` anchor asserts the end. This beginning and end combination will ensure the entirety of the string will be matched.
 
 ### Quantifiers
