@@ -13,7 +13,6 @@ Let's look at this regex `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
 ## Regex Components
@@ -64,10 +63,16 @@ The role of character classes is to make distinctions between various types of c
 `\d` will match any digit [0-9]. `a-z` will match any lowercase letter, `\.` will match a dot, and `-` will match a hyphen.
 This segment of the regex looks for a sequence that can contain digits, lowercase letters, periods (dots), or hyphens. This is searching the domain name portion of the URL.
 
-### Flags
-
 ### Character Escapes
+
+```javascript
+\/
+```
+
+Inside of this URL-matching regex, the escape sequence is used to match literal character. In this case it must strictly match the forward slash character provided after the escape character. Using any character after an escape means that it must be precisely matched and there are to be no other special regex interpretations.
+In a URL, the forward slash is an essential component, so in this regex the accurate matching is necessary.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Phil Iacone is an aspiring full stack web developer located in Philadelpha, PA.
+https://github.com/p-iacone88
