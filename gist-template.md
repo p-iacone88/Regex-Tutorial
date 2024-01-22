@@ -60,6 +60,8 @@ The last `?` signifies the protocol section is optional, so that a URL without a
 ```
 
 The character class is defined here as needing to match lowercase letters, [a-z]. `\.` means that it must match a literal dot. So the characters must be lowercase letters and dots.
+This is used to validate the top-level domain of a URL, ie., '.com.'
+`{2,6}` following the character class specifies that the top-level domain needs to consist of at least 2 and no more than 6 characters to align with the common patterns.
 
 ### Character Classes
 
@@ -82,5 +84,5 @@ In a URL, the forward slash is an essential component, so in this regex the accu
 
 ## Author
 
-Phil Iacone is an aspiring full stack web developer located in Philadelpha, PA.
+Philip Iacone is an aspiring full stack web developer located in Philadelpha, PA.
 https://github.com/p-iacone88
