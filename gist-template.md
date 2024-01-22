@@ -45,7 +45,21 @@ The use of parentheses for grouping constructs in regex enables the accurate app
 
 ### Bracket Expressions
 
+```javascript
+[a-z\.]
+```
+
+The character class is defined here as needing to match lowercase letters, [a-z]. `\.` means that it must match a literal dot. So the characters must be lowercase letters and dots.
+
 ### Character Classes
+
+```javascript
+([\da-z\.-]+)
+```
+
+The role of character classes is to make distinctions between various types of characters, such as separating letters from digits.
+`\d` will match any digit [0-9]. `a-z` will match any lowercase letter, `\.` will match a dot, and `-` will match a hyphen.
+This segment of the regex looks for a sequence that can contain digits, lowercase letters, periods (dots), or hyphens. This is searching the domain name portion of the URL.
 
 ### The OR Operator
 
