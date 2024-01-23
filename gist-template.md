@@ -1,6 +1,6 @@
 # Regex Tutorial
 
-In this guide I'd like to walk through the details of Regex, otherwise known as regular expression syntax. We'll start by breaking down each component by providing a code example and a detailed explanation. As a web development student, understanding regex can be extremely helpful for dissecting and understanding search patterns defined in code.
+In this guide I'd like to walk through some of the details of Regex, otherwise known as regular expression syntax. We'll start by breaking down each component of this URL matching regex by providing a segment of the code example followed by a detailed explanation. As a web development student, understanding regex can be extremely helpful for dissecting and understanding search patterns defined in code.
 
 ## Summary
 
@@ -27,7 +27,7 @@ Let's look at this regex `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.
 /$
 ```
 
-To start, this regular expression uses the `^` anchor to denote the start of the string, while the `$` anchor asserts the end. This beginning and end combination will ensure the entirety of the string will be matched.
+To start, this regular expression uses two anchors; one to mark the beginning of the string and the other to mark the end of the string. The `^` anchor denotes the start of the string, while the `$` anchor asserts the end. This beginning and end combination will ensure the entirety of the string will be matched and everything in between is to be checked.
 
 ### Quantifiers
 
@@ -35,7 +35,7 @@ To start, this regular expression uses the `^` anchor to denote the start of the
 ([\/\w \.-]*)*
 ```
 
-Quantifiers are the symbols to define the number of occurrences of the preceding character or group. The `*` quantifier is used to signify zero or more, so the proceeding element is allowed to not be present at all, or it can appear as many times as used in what is being tested.
+Quantifiers are the symbols to define the number of occurrences of the preceding character or group. The `*` quantifier is used to signify zero or more, so the proceeding elements are allowed to not be present at all, or they can appear as many times as used in the string being tested.
 
 In this case, forward slashes`/`, word characters `\w`, spaces, dots `.`, and hyphens `-` can be used. The `* ` means that the URL path can occur many times or not at all due to the variety of URL structures.
 
